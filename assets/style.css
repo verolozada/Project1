@@ -1,0 +1,12 @@
+.container { 
+    background-color: #ff1744 red accent-3;
+}
+
+body { 
+   background-color:  #f5f5f5 grey lighten-4;
+}
+
+h1 { 
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
