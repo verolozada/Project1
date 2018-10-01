@@ -22,6 +22,7 @@ $("#add-review").on("click", function (event){
 //  inputs from the user
  const userName = $("#icon_name").val().trim();
  const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
+//  TODO: input validation for email 
  const userEmail = $("#email").val().trim();
  const userComment = $("#icon_comment").val().trim();
 
@@ -60,6 +61,15 @@ const userComment = snap.val().comment;
 
 // change de date format to display it on the screen
 const userDate1 = moment.unix(userDate).format("MM/DD/YYYY");
+
+const newCard = $("<div>").append(
+    $("<h5>").text(userName),
+    $("<p>").text(userDate1),
+    $("<p>").text(userComment))
+    newCard.addClass("card-panel");
+
+
+$("#userComments").prepend(newCard); 
 
 })
 
