@@ -10,6 +10,12 @@ $(document).ready(function () {
         console.log(city);
         country = $("#autocomplete-input2").val().trim();
         console.log(country);
+        console.log("HEllo");
     });
+
+
+
+
+
 });
 
