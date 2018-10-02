@@ -21,6 +21,7 @@ $("#add-review").on("click", function (event){
 
 //  inputs from the user
  const userName = $("#icon_name").val().trim();
+ //TODO: validate date
  const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
 //  TODO: input validation for email 
  const userEmail = $("#email").val().trim();
@@ -67,11 +68,15 @@ const newCard = $("<div>").append(
     $("<p>").text(userDate1),
     $("<p>").text(userComment))
     newCard.addClass("card-panel");
-
+    newCard.attr("id", snap.key)
 
 $("#userComments").prepend(newCard); 
+});
 
-})
-
+database.ref().on("child_removed", function(snap){
+    console.log(snap.key);
+    const newCardRemoved = $("#"+ snap.key);
+    newCardRemoved.remove();
+});
 });
 
