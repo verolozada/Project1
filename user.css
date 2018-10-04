@@ -5,7 +5,7 @@ body {
 }
 
 .p{
-    font-size: 30px;
+    font-size: 1em;
 } 
 
 .content {
@@ -15,23 +15,27 @@ margin-top: 100px;
 
 
 .thingToDo{
-    border: 1px solid gray;
+    border: .01em solid gray;
     margin-top: 100px;
     text-align: center;
+    border-radius: 1em;
 }
 
 .bands{
-    border: 1px solid gray;
+    border: .01em solid gray;
     text-align: center;
+    border-radius: 1em;
 }
 
 .vlogs{
-    border: 1px solid gray;
+    border: .01em solid gray;
     text-align: center;
+    border-radius: 1em;
 }
 
 h4{
    font-family: 'Fjalla One';
+   font-size: 2rem;
 }
 
 .page-footer{

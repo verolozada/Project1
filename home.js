@@ -1,20 +1,22 @@
 $(document).ready(function () {
 
-    let city;
-    let country;
+//Add in enter button functionality for submit button
+    var input = document.getElementById("test"); 
 
-    $("#test").on("click", function () {
-        // event.preventDefault();
-        console.log("I've been clicked");
-        city = $("#autocomplete-input1").val().trim();
-        console.log(city);
-        country = $("#autocomplete-input2").val().trim();
-        console.log(country);
-        console.log("HEllo");
-    });
+    // Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Trigger the button element with a click
+      document.getElementById("test").click();
+    }
+  });
 
 
-    //calling the YouTube API
+  let city;
+  let country;
 
 
 });
