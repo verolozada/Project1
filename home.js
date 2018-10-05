@@ -17,7 +17,7 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log('Response from FourSquare===>', response);
-            const { response:{ groups }} = response;
+            const { response: { groups } } = response;
             const venues = [];
             groups[0].items.forEach(item => venues.push(item.venue.name));
             console.log('normalized DATA ==>', venues);
@@ -25,20 +25,9 @@ $(document).ready(function () {
                 console.log(venue);
                 $(".thingToDo").append('<p>' + venue + '</p>');
             });
-          
+
         })
     });
 });
 
-// Looping through each result item.
-            // for (var f = 0; f < data.length; f++) {
-            //     // Creating and storing the thingsToDo div as the varaible recommendedDiv
-            //     var recommendedDiv = $("#thingsToDo");
-                    // venues.forEach(venue => $("#thingsToDo").append('<p>' + venue));
-            
-            
-            
-                    //     //Creating a paragraph tag with the responses venue name in it.
-            //     var r = $("<p>").text(data[f].venue.name);
 
-            // }

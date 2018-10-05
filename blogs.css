@@ -5,15 +5,15 @@ body {
 }
 
 h5{
+    margin-top: 2em;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
 
 
-
-
 .slider{
-    margin-top: 1em;
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
 
 .page-footer{
