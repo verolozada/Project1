@@ -78,20 +78,50 @@ $(document).ready(function () {
         const newCardRemoved = $("#" + snap.key);
         newCardRemoved.remove();
     });
+
+    document.getElementById("email").addEventListener("keyup", pressHandler);
+    document.getElementById("icon_date").addEventListener("keyup", pressHandler);
+
+    let validEmail; 
+    let validDate;
+
+    function pressHandler(e) {
+        const email = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/
+        const date = /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/
+        console.log($(this).attr("id"));
+        let inputId = $(this).attr("id")
+        if (inputId === "email"){
+            validEmail = email.test($(this).val()) 
+            console.log(validEmail);
+            colorValidation(validEmail, inputId);
+        } else if (inputId === "icon_date"){
+            validDate = date.test($(this).val())
+            console.log(validDate);
+            colorValidation(validDate, inputId);
+        }
+    }
+
+    function colorValidation (value, input){
+        if (value === false && input === "email"){
+            $("#email-test").css("color","red"); //.css is a function of jQuery 
+        } else if (value === true && input === "email"){
+            $("#email-test").css("color","green");
+        } else if (value === false && input === "icon_date"){
+            $("#date-test").css("color","red"); 
+        }else if (value === true && input === "icon_date"){
+            $("#date-test").css("color","green");
+        }
+    }
+
 });
 
 
 
-// validate information 
-const example = /[a-z]/i;//regular expression goes between / to make it insenstive we add the i 
 
-const inputs = document.querySelectorAll('input');
-inputs.forEach((input) => {
-    input.addEventListener('keyup', (e) => {
-        console.log(e.target.attributes.name.value);
-        console.log("hello");
-    });
-});
+
+
+
+
 
 
 
