@@ -50,23 +50,25 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_name" type="text" class="validate">
+                        <input id="icon_name" type="text" class="validate signup" name = "name">
                         <label for="icon_name" class="active">Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
                         <i class="material-icons prefix">date_range</i>
-                        <input id="icon_date" type="tel" class="validate">
+                        <input id="icon_date" type="tel" class="validate signup" name="date">
                         <label for="icon_date" class="active">Date (MM/DD/YYYY)</label>
+                        <span id ="date-test"class="helper-text" data-error="wrong" data-success="right">enter a valid date</span>
+
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s8">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" class="validate signup" name ="email">
                         <label for="email" class="active">Email</label>
-                        <!-- <span class="helper-text" data-error="wrong" data-success="right"></span> -->
+                        <span id ="email-test"class="helper-text" data-error="wrong" data-success="right">email must be a valid address (name@domain.com)</span>
                     </div>
                 </div>
                 <div class="row">
@@ -80,12 +82,17 @@
                     <a class="btn-floating btn-small waves-effect waves-light black" id="add-review">
                         <i class="material-icons">add</i>
                     </a>
+                    <span id ="click-test"class="helper-text" data-error="wrong" data-success="right"></span>
+
                 </div>
+        
             </form>
         </div>
         <!-- Comments from the users -->
         <div id="userComments"></div>
     </div>
+
+ 
 
 
     <footer class="page-footer red accent-3">
