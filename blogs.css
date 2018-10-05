@@ -4,8 +4,16 @@ body {
     flex-direction: column;
 }
 
+h5{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
 .slider{
-    margin-top: 4em;
+    margin-top: 1em;
 }
 
 .page-footer{
