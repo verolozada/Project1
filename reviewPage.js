@@ -1,86 +1,100 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
-// Initialize Firebase
-const config = {
-    apiKey: "AIzaSyARrDMzSc-2DHlnBpa38ZVGDbT5f1EIOt8",
-    authDomain: "bonvoyage-8a3e7.firebaseapp.com",
-    databaseURL: "https://bonvoyage-8a3e7.firebaseio.com",
-    projectId: "bonvoyage-8a3e7",
-    storageBucket: "bonvoyage-8a3e7.appspot.com",
-    messagingSenderId: "425704545498"
-};
-firebase.initializeApp(config);
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyARrDMzSc-2DHlnBpa38ZVGDbT5f1EIOt8",
+        authDomain: "bonvoyage-8a3e7.firebaseapp.com",
+        databaseURL: "https://bonvoyage-8a3e7.firebaseio.com",
+        projectId: "bonvoyage-8a3e7",
+        storageBucket: "bonvoyage-8a3e7.appspot.com",
+        messagingSenderId: "425704545498"
+    };
+    firebase.initializeApp(config);
 
-// variables to declare
-const database = firebase.database();
-
-
-// add reviews from the user
-$("#add-review").on("click", function (event){
-    event.preventDefault();
-
-//  inputs from the user
- const userName = $("#icon_name").val().trim();
- //TODO: validate date
- const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
-//  TODO: input validation for email 
- const userEmail = $("#email").val().trim();
- const userComment = $("#icon_comment").val().trim();
+    // variables to declare
+    const database = firebase.database();
 
 
-//hold data 
-const newUser = {
-    name: userName,
-    date: userDate,
-    email: userEmail,
-    comment: userComment
-}
+    // add reviews from the user
+    $("#add-review").on("click", function (event) {
+        event.preventDefault();
 
-// ref gets yout to the root of the object in firebase 
-database.ref().push(newUser);
+        //  inputs from the user
+        const userName = $("#icon_name").val().trim();
+        //TODO: validate date
+        const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
+        //  TODO: input validation for email 
+        const userEmail = $("#email").val().trim();
+        const userComment = $("#icon_comment").val().trim();
 
-console.log(newUser.name);
-console.log(newUser.email);
-console.log(newUser.date);
-console.log(newUser.comment);
 
-$("#icon_name").val("");
-$("#icon_date").val("");
-$("#email").val("");
-$("#icon_comment").val("");
-});
+        //hold data 
+        const newUser = {
+            name: userName,
+            date: userDate,
+            email: userEmail,
+            comment: userComment
+        }
 
-// .on everytime the data changes I want to see the changes in my object in firebase
-// child_added (a new review is addded) TODO: child_removed for inappropriate comments
-database.ref().on("child_added", snap => {
+        // ref gets yout to the root of the object in firebase 
+        database.ref().push(newUser);
 
-// specify what we want to see from the snap, it could be key names, child changes, etc. In this case we want to see the values
-const userName = snap.val().name;
-const userDate = snap.val().date;
-const userEmail = snap.val().email;
-const userComment = snap.val().comment;
+        console.log(newUser.name);
+        console.log(newUser.email);
+        console.log(newUser.date);
+        console.log(newUser.comment);
 
-// change de date format to display it on the screen
-const userDate1 = moment.unix(userDate).format("MM/DD/YYYY");
+        $("#icon_name").val("");
+        $("#icon_date").val("");
+        $("#email").val("");
+        $("#icon_comment").val("");
+    });
 
-const newCard = $("<div>").append(
-    $("<h5>").text(userName),
-    $("<p>").text(userDate1),
-    $("<p>").text(userComment))
-    newCard.addClass("card-panel");
-    newCard.attr("id", snap.key)
+    // .on everytime the data changes I want to see the changes in my object in firebase
+    // child_added (a new review is addded) TODO: child_removed for inappropriate comments
+    database.ref().on("child_added", snap => {
 
-$("#userComments").prepend(newCard); 
-});
+        // specify what we want to see from the snap, it could be key names, child changes, etc. In this case we want to see the values
+        const userName = snap.val().name;
+        const userDate = snap.val().date;
+        const userEmail = snap.val().email;
+        const userComment = snap.val().comment;
 
-database.ref().on("child_removed", snap => {  //call the snap function 
-    console.log(snap.key);
-    const newCardRemoved = $("#"+ snap.key);
-    newCardRemoved.remove();
-});
+        // change de date format to display it on the screen
+        const userDate1 = moment.unix(userDate).format("MM/DD/YYYY");
+
+        const newCard = $("<div>").append(
+            $("<h5>").text(userName),
+            $("<p>").text(userDate1),
+            $("<p>").text(userComment))
+        newCard.addClass("card-panel");
+        newCard.attr("id", snap.key)
+
+        $("#userComments").prepend(newCard);
+    });
+
+    database.ref().on("child_removed", snap => {  //call the snap function 
+        console.log(snap.key);
+        const newCardRemoved = $("#" + snap.key);
+        newCardRemoved.remove();
+    });
 });
 
 
 
 // validate information 
+const example = /[a-z]/i;//regular expression goes between / to make it insenstive we add the i 
+
+const inputs = document.querySelectorAll('input');
+inputs.forEach((input) => {
+    input.addEventListener('keyup', (e) => {
+        // console.log(e.target.attributes.name.value);
+        console.log("hello");
+    });
+});
+
+
+
+
+
 
