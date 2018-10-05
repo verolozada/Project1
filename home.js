@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    var GoogleAuth;
 
     $("#test").on("click", function () {
         // event.preventDefault();
@@ -28,6 +29,43 @@ $(document).ready(function () {
 
         })
     });
+
+    function search(){ 
+        //Clear results
+        $('.vlogs').html();
+        $('#test').html();
+
+        //Get Form Input 
+        q = $ ("#query").val();
+
+        //Run GET request on the API 
+        $.get(
+            "https://www.googleapis.com/youtube/v3/search",{
+            part: 'snippet, id',
+            q: q, 
+            type: 'video',
+            key: AIzaSyDnJZQENCNACGclR0grH3IoXQJNGEZHEtM},
+            function(data){
+                var nextPageToken = data.nextPageToken;
+                var prevPageToken = data.prevPageToken;
+             }
+        );
+
+    }
+
+
+
+
+
+
 });
+
+    
+
+
+
+
+
+
 
 
