@@ -88,7 +88,7 @@ const example = /[a-z]/i;//regular expression goes between / to make it insensti
 const inputs = document.querySelectorAll('input');
 inputs.forEach((input) => {
     input.addEventListener('keyup', (e) => {
-        // console.log(e.target.attributes.name.value);
+        console.log(e.target.attributes.name.value);
         console.log("hello");
     });
 });
