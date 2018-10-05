@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    let validEmail; 
+    let validDate;
+    // let validName;
+    // let validComment;
 
     // Initialize Firebase
     const config = {
@@ -19,6 +23,7 @@ $(document).ready(function () {
     $("#add-review").on("click", function (event) {
         event.preventDefault();
 
+        if (validEmail === true && validDate === true){
         //  inputs from the user
         const userName = $("#icon_name").val().trim();
         //TODO: validate date
@@ -48,6 +53,11 @@ $(document).ready(function () {
         $("#icon_date").val("");
         $("#email").val("");
         $("#icon_comment").val("");
+        $("#click-test").text("");
+
+    } else {
+        $("#click-test").text("please complete the form");
+    }
     });
 
     // .on everytime the data changes I want to see the changes in my object in firebase
@@ -82,8 +92,6 @@ $(document).ready(function () {
     document.getElementById("email").addEventListener("keyup", pressHandler);
     document.getElementById("icon_date").addEventListener("keyup", pressHandler);
 
-    let validEmail; 
-    let validDate;
 
     function pressHandler(e) {
         const email = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/
@@ -104,12 +112,16 @@ $(document).ready(function () {
     function colorValidation (value, input){
         if (value === false && input === "email"){
             $("#email-test").css("color","red"); //.css is a function of jQuery 
+            $("#email-test").text("email must be a valid address (name@domain.com)");
         } else if (value === true && input === "email"){
             $("#email-test").css("color","green");
+            $("#email-test").text("valid email");
         } else if (value === false && input === "icon_date"){
             $("#date-test").css("color","red"); 
+            $("#date-test").text("enter a valid date");
         }else if (value === true && input === "icon_date"){
             $("#date-test").css("color","green");
+            $("#date-test").text("valid date");
         }
     }
 
