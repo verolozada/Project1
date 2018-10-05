@@ -33,6 +33,33 @@ h4{
     border-radius: 1em;
 }
 
+.thingToDo{
+    border: .01em solid gray;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.translate{
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.vlogs{
+    border: .01em solid gray;
+    text-align: center;
+    border-radius: 1em;
+}
+
+
+h4{
+    font-family: 'Fjalla One';
+    font-size: 2rem;
+ }
+
+
+
 .page-footer{
     position: fixed;
    left: 0;
