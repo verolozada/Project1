@@ -1,5 +1,12 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .p{
-    font-size: 30px;
+    font-size: 2em;  
+    font-family: 'Fjalla One';
 } 
 
 .content {
@@ -25,7 +32,9 @@ margin-top: 100px;
 }
 
 h4{
-   font-family: 'Fjalla One';
+    font-size: 1rem;
+    font-weight: bold;
+    
 }
 
 .content{
@@ -35,14 +44,22 @@ h4{
     padding: 2em;
 }
 
-h6{
-    font-size: 0.7em;
-}
 
 #userSubmit{
-    border: 0.01em solid gray;
-    width: 40%;
+    border: 0.1em solid gray;
+    width: 60%;
     margin-top: 4em;
-    padding: 1em;
+    margin-bottom: 4em;
+    padding: 2em;
     text-align: center;
+    border-radius: 1em;
 }
+
+.page-footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+}
+
