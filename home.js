@@ -20,7 +20,7 @@ $(document).ready(function () {
             const { response: { groups } } = response;
             const venues = [];
             // const venuesAddress = [];
-            groups[0].items.forEach(item => venues.push(item.venue.name + " Address:  " + (item.venue.location.address)));
+            groups[0].items.forEach(item => venues.push(item.venue.name + " Category: " + (item.venue.categories[0].name) + " Address:  " + (item.venue.location.address)));
             console.log('normalized DATA ==>', venues);
             // groups[0].items.forEach(item => venuesAddress.push(item.venue.location.address));
             // console.log('normalized DATA Address ==>', venuesAddress);
