@@ -19,10 +19,12 @@ $(document).ready(function () {
             console.log('Response from FourSquare===>', response);
             const { response:{ groups }} = response;
             const venues = [];
-            groups[0].items.forEach(item => venues.push(item.venue.name + item.venue.location.address));
+            // const venuesAddress = [];
+            groups[0].items.forEach(item => venues.push(item.venue.name + " Address:  " + (item.venue.location.address)));
             console.log('normalized DATA ==>', venues);
-            // groups[0].items.forEach(item => venues.push(item.venue.location.address));
-            console.log('normalized DATA Address ==>', venues);
+            // groups[0].items.forEach(item => venuesAddress.push(item.venue.location.address));
+            // console.log('normalized DATA Address ==>', venuesAddress);
+            // console.log('normalized DATA & Address ==>', venues[] + venuesAddress[]);
             // venues.forEach(venue => {
             //     console.log(venue);
             //     $("#thingsToDo").append('<p>' + venue.name + '</p>');
