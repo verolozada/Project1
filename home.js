@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 
-<<<<<<< HEAD
     $("#test").on("click", function () {
         // event.preventDefault();
         console.log("I've been clicked");
@@ -20,12 +19,14 @@ $(document).ready(function () {
             console.log('Response from FourSquare===>', response);
             const { response:{ groups }} = response;
             const venues = [];
-            groups[0].items.forEach(item => venues.push(item.venue.name));
+            groups[0].items.forEach(item => venues.push(item.venue.name + item.venue.location.address));
             console.log('normalized DATA ==>', venues);
-            venues.forEach(venue => {
-                console.log(venue);
-                $("#thingsToDo").append('<p>' + venue.name + '</p>');
-            });
+            // groups[0].items.forEach(item => venues.push(item.venue.location.address));
+            console.log('normalized DATA Address ==>', venues);
+            // venues.forEach(venue => {
+            //     console.log(venue);
+            //     $("#thingsToDo").append('<p>' + venue.name + '</p>');
+            // });
           
         })
     });
@@ -43,9 +44,3 @@ $(document).ready(function () {
             //     var r = $("<p>").text(data[f].venue.name);
 
             // }
-=======
-   
-
-
-
->>>>>>> 9725fbf12cfd26093df4e0031fb7f5ac28b552a3
