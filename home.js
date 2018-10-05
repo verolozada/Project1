@@ -1,8 +1,7 @@
 $(document).ready(function () {
 
-    let city;
-    let country;
 
+<<<<<<< HEAD
     $("#test").on("click", function () {
         // event.preventDefault();
         console.log("I've been clicked");
@@ -44,3 +43,9 @@ $(document).ready(function () {
             //     var r = $("<p>").text(data[f].venue.name);
 
             // }
+=======
+   
+
+
+
+>>>>>>> 9725fbf12cfd26093df4e0031fb7f5ac28b552a3

@@ -1,5 +1,11 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 .p{
-    font-size: 30px;
+    font-size: 1em;
 } 
 
 .content {
@@ -9,25 +15,34 @@ margin-top: 100px;
 
 
 .thingToDo{
-    border: 1px solid gray;
+    border: .01em solid gray;
     margin-top: 100px;
     text-align: center;
+    border-radius: 1em;
 }
 
-.bands{
+.translate{
     border: 1px solid gray;
     text-align: center;
+    border-radius: 1em;
 }
 
 .vlogs{
-    border: 1px solid gray;
+    border: .01em solid gray;
     text-align: center;
+    border-radius: 1em;
 }
 
 h4{
    font-family: 'Fjalla One';
+   font-size: 2rem;
 }
 
-
-
+.page-footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+}
 

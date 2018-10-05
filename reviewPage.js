@@ -52,7 +52,7 @@ $("#icon_comment").val("");
 
 // .on everytime the data changes I want to see the changes in my object in firebase
 // child_added (a new review is addded) TODO: child_removed for inappropriate comments
-database.ref().on("child_added", function(snap){
+database.ref().on("child_added", snap => {
 
 // specify what we want to see from the snap, it could be key names, child changes, etc. In this case we want to see the values
 const userName = snap.val().name;
@@ -73,10 +73,13 @@ const newCard = $("<div>").append(
 $("#userComments").prepend(newCard); 
 });
 
-database.ref().on("child_removed", function(snap){
+database.ref().on("child_removed", snap => {  //call the snap function 
     console.log(snap.key);
     const newCardRemoved = $("#"+ snap.key);
     newCardRemoved.remove();
 });
 });
 
+
+
+ 
