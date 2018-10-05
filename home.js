@@ -12,7 +12,6 @@ $(document).ready(function () {
         // Attempting to call fourSquare API
         var fsURl = 'https://api.foursquare.com/v2/venues/explore?client_id=D4PJXJ4YDXIGGJXL0HU1XM1AZFXHDZTXFCIY0XKP5ALGUXJL&client_secret=L5O4FMUQAILJDX4SYQJBJLGXMG31P5LIGN2OQVL3WC4JVIU5&v=20180323&limit=4&near=' + city + ',' + country;
         console.log(fsURl)
-        var x;
         $.ajax({
             url: fsURl,
             method: "GET"
