@@ -23,7 +23,7 @@ $(document).ready(function () {
             console.log('normalized DATA ==>', venues);
             venues.forEach(venue => {
                 console.log(venue);
-                $(".thingToDo").append('<p>' + venue.name + '</p>');
+                $(".thingToDo").append('<p>' + venue + '</p>');
             });
           
         })
