@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    var GoogleAuth;
 
     $("#test").on("click", function () {
         // event.preventDefault();
@@ -17,28 +18,54 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log('Response from FourSquare===>', response);
-            const { response:{ groups }} = response;
+            const { response: { groups } } = response;
             const venues = [];
             groups[0].items.forEach(item => venues.push(item.venue.name));
             console.log('normalized DATA ==>', venues);
             venues.forEach(venue => {
                 console.log(venue);
-                $("#thingsToDo").append('<p>' + venue.name + '</p>');
+                $(".thingToDo").append('<p>' + venue + '</p>');
             });
-          
+
         })
     });
+
+    function search(){ 
+        //Clear results
+        $('.vlogs').html();
+        $('#test').html();
+
+        //Get Form Input 
+        q = $ ("#query").val();
+
+        //Run GET request on the API 
+        $.get(
+            "https://www.googleapis.com/youtube/v3/search",{
+            part: 'snippet, id',
+            q: q, 
+            type: 'video',
+            key: AIzaSyDnJZQENCNACGclR0grH3IoXQJNGEZHEtM},
+            function(data){
+                var nextPageToken = data.nextPageToken;
+                var prevPageToken = data.prevPageToken;
+             }
+        );
+
+    }
+
+
+
+
+
+
 });
 
-// Looping through each result item.
-            // for (var f = 0; f < data.length; f++) {
-            //     // Creating and storing the thingsToDo div as the varaible recommendedDiv
-            //     var recommendedDiv = $("#thingsToDo");
-                    // venues.forEach(venue => $("#thingsToDo").append('<p>' + venue));
-            
-            
-            
-                    //     //Creating a paragraph tag with the responses venue name in it.
-            //     var r = $("<p>").text(data[f].venue.name);
+    
 
-            // }
+
+
+
+
+
+
+
