@@ -82,4 +82,5 @@ database.ref().on("child_removed", snap => {  //call the snap function
 
 
 
- 
+// validate information 
+
