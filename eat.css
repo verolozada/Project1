@@ -44,3 +44,15 @@ h5{
 .eat{
     color: black;
 }
+
+.rest-name{
+    color: black;
+    text-align: center;
+    font-family: "Courgette";
+    font-size: 1.5em;
+}
+
+#restaurant{
+    text-align: center;
+    margin: 0 auto center;
+}

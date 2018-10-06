@@ -17,84 +17,198 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
 
-</head>
+    <body>
 
-<body>
+        <nav class="red accent-3">
+            <div class="nav-wrapper container">
+                <a href="home.html" class="brand-logo" style="font-family:'Pacifico', cursive;">Bon Voyage</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="destinations.html">Wonders of the World</a>
+                    </li>
+                    <li>
+                        <a href="eat.html">Top World's 6 Best Restaurants</a>
+                    </li>
+                    <li>
+                        <a href="blogs.html">Tavel Blogs</a>
+                    </li>
+                    <li>
+                        <a href="reviews.html">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <nav class="red accent-3">
-        <div class="nav-wrapper container">
-            <a href="home.html" class="brand-logo" style="font-family:'Pacifico', cursive;">Bon Voyage</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li>
-                    <a href="destinations.html">Top Destinations</a>
-                </li>
-                <li>
-                    <a href="eat.html">Top Places to Eat</a>
-                </li>
-                <li>
-                    <a href="blogs.html">Tavel Blogs</a>
-                </li>
-                <li>
-                    <a href="reviews.html">Reviews</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-        <br>
-        <br>
-        <div class="row">
-            <div class="col s5">
-                <!-- Modal Trigger -->
-                <a class="modal-trigger photo" href="#modal1">
-                    <img class="responsive-img" src="https://i.ytimg.com/vi/LO4ZXsyI6AU/maxresdefault.jpg">
-                </a>
-
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4>Osteria Francescana</h4>
-                        <p>A bunch of text</p>
+        <div class="container" id="restaurants">
+            <br>
+            <br>
+            <div class="row">
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger photo" href="#modal1">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="http://italiasquisita.net/files/chunks/57dfbc3ea0d5560c8d000168/photo-max_57dfe9caa0d5560c78000185.jpg">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">Osteria Francescana</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>Osteria Francescana</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger" href="#modal2">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="http://www.restaurantezaldiaran.com/galeria_secc/87L2vk5P_07_Steak-tartar-con-helado-de-mostaza-y-patatas-soufle,-tomate-especiado,-compota-de-alcaparras,-encurtidos...jpg">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">El Celler de Can Roca</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal2" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>El Celler de Can Roca</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col s5">
-                <!-- Modal Trigger -->
-                <a class="modal-trigger photo" href="#modal1">
-                    <img class="responsive-img" src="https://i.ytimg.com/vi/LO4ZXsyI6AU/maxresdefault.jpg">
-                </a>
-                <!-- Modal Structure -->
-                <div id="modal1" class="modal modal-fixed-footer">
-                    <div class="modal-content">
-                        <h4>Osteria Francescana</h4>
-                        <p>A bunch of text</p>
+            <div class="row">
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger photo" href="#modal3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="https://i.pinimg.com/originals/95/fe/5f/95fe5fadc8c350189ff7c117821f9af9.jpg">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">Mirazur</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal3" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>Osteria Francescana</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger" href="#modal4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="https://media-cdn.tripadvisor.com/media/photo-s/0d/73/4e/f2/liberty-duck-confit-prime.jpg  ">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">Eleven Madison Park</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal4" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>El Celler de Can Roca</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger photo" href="#modal5">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="http://danielfooddiary.com/wp-content/uploads/2016/03/gaggan17.jpg">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">Gaggan</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal5" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>Osteria Francescana</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s5">
+                    <!-- Modal Trigger -->
+                    <a class="modal-trigger" href="#modal6">
+                        <div class="card">
+                            <div class="card-image">
+                                <img class="responsive-img pic" src="https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fcheryltiu%2Ffiles%2F2016%2F09%2FCentral-Restaurant-Lima-Peru2.jpg">
+                            </div>
+                            <div class="card-content">
+                                <p class="rest-name">Central</p>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Modal Structure -->
+                    <div id="modal6" class="modal modal-fixed-footer">
+                        <div class="modal-content">
+                            <h4>El Celler de Can Roca</h4>
+                            <p>A bunch of text</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <br>
+        <br>
 
-    <footer class="page-footer red accent-3">
-        <div class="container2">
-            © 2018 Copyright
-        </div>
-        </div>
-    </footer>
+        <footer class="page-footer red accent-3">
+            <div class="container2">
+                © 2018 Copyright
+            </div>
+            </div>
+        </footer>
 
-</body>
+    </body>
 
-<script>
-    $(document).ready(function () {
-        $('.modal').modal();
-    });
-</script>
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
 
 </html>
