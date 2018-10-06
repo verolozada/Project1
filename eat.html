@@ -36,60 +36,51 @@
                     <a href="blogs.html">Tavel Blogs</a>
                 </li>
                 <li>
-                    <a href="reviews.html">Review</a>
+                    <a href="reviews.html">Reviews</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="slider">
-        <ul class="slides">
-            <li>
-                <img src="images/the-bucket-list-family.jpeg">
-                <div class="caption">
-                    <a class="link" href="http://www.thebucketlistfamily.com/" target="_blank">The Bucket List Family</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/dan.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.danflyingsolo.com/">Dan Flying Solo</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/savage.jpg">
-                <div class="caption">
-                    <a class="link" href="http://www.traveling-savage.com/2018/09/05/picture-this-note-bow-fiddle-rock/">The
-                        Traveling Savage</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/bemy4.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.bemytravelmuse.com/about/">Be My Travel Muse</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/2dads.jpg">
-                <div class="caption">
-                    <a class="link" href="https://2traveldads.com/">2 Travel Dads</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/goats.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.goatsontheroad.com/">Goats on the Road</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/nerds2.jpg">
-                <div class="caption">
-                    <a class="link" href="https://nerdnomads.com/">The Nerd Nomads</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col s5">
+                <!-- Modal Trigger -->
+                <a class="modal-trigger photo" href="#modal1">
+                    <img class="responsive-img" src="https://i.ytimg.com/vi/LO4ZXsyI6AU/maxresdefault.jpg">
+                </a>
 
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h4>Osteria Francescana</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s5">
+                <!-- Modal Trigger -->
+                <a class="modal-trigger photo" href="#modal1">
+                    <img class="responsive-img" src="https://i.ytimg.com/vi/LO4ZXsyI6AU/maxresdefault.jpg">
+                </a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        <h4>Osteria Francescana</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close x</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="page-footer red accent-3">
         <div class="container2">
@@ -102,7 +93,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.slider').slider();
+        $('.modal').modal();
     });
 </script>
 
