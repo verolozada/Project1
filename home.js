@@ -22,14 +22,11 @@ $(document).ready(function () {
             // const venuesAddress = [];
             groups[0].items.forEach(item => venues.push(item.venue.name + " Category: " + (item.venue.categories[0].name) + " Address:  " + (item.venue.location.address)));
             console.log('normalized DATA ==>', venues);
-            // groups[0].items.forEach(item => venuesAddress.push(item.venue.location.address));
-            // console.log('normalized DATA Address ==>', venuesAddress);
-            // console.log('normalized DATA & Address ==>', venues[] + venuesAddress[]);
             // venues.forEach(venue => {
             //     console.log(venue);
             //     $("#thingsToDo").append('<p>' + venue.name + '</p>');
             // });
-          
+
             venues.forEach(venue => {
                 console.log("This is the Venue ==>", venue);
                 $(".thingToDo").append('<p>' + venue + '</p>');
@@ -38,25 +35,26 @@ $(document).ready(function () {
         })
     });
 
-    function search(){ 
+    function search() {
         //Clear results
         $('.vlogs').html();
         $('#test').html();
 
         //Get Form Input 
-        q = $ ("#query").val();
+        q = $("#query").val();
 
         //Run GET request on the API 
         $.get(
-            "https://www.googleapis.com/youtube/v3/search",{
-            part: 'snippet, id',
-            q: q, 
-            type: 'video',
-            key: AIzaSyDnJZQENCNACGclR0grH3IoXQJNGEZHEtM},
-            function(data){
+            "https://www.googleapis.com/youtube/v3/search", {
+                part: 'snippet, id',
+                q: q,
+                type: 'video',
+                key: AIzaSyDnJZQENCNACGclR0grH3IoXQJNGEZHEtM
+            },
+            function (data) {
                 var nextPageToken = data.nextPageToken;
                 var prevPageToken = data.prevPageToken;
-             }
+            }
         );
 
     }
@@ -68,7 +66,7 @@ $(document).ready(function () {
 
 });
 
-    
+
 
 
 
