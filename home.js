@@ -1,6 +1,5 @@
 $(document).ready(function () {
-
-    var GoogleAuth;
+   
 
     $("#test").on("click", function () {
         // event.preventDefault();
@@ -33,6 +32,8 @@ $(document).ready(function () {
             });
 
         })
+<<<<<<< HEAD
+=======
     });
 
     function search() {
@@ -63,6 +64,7 @@ $(document).ready(function () {
 
 
 
+>>>>>>> 236e6672e0f8ab649bd888a74cdc9fdf758d4106
 
 });
 
