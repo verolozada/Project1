@@ -37,13 +37,6 @@ h5{
     text-align: center;
 }
 
-.eat-page{
-    width: 50%
-}
-
-.eat{
-    color: black;
-}
 
 .rest-name{
     color: black;
@@ -52,7 +45,17 @@ h5{
     font-size: 1.5em;
 }
 
-#restaurant{
-    text-align: center;
-    margin: 0 auto center;
+.rest-place{
+    font-family: "Pathway Gothic One";
+    color: black;
+    font-size: 2.5em;
+}
+
+.rest-text{
+    text-align: justify;
+}
+
+.source{
+    font-style: italic;
+    font-weight: bold;
 }
