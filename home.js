@@ -18,6 +18,7 @@ $(document).ready(function () {
             console.log('Response from FourSquare===>', response);
             const { response: { groups } } = response;
             const venues = [];
+            // This code returns the response for the venue's name, the venue's address and the venue's category from the FourSquare API.
             groups[0].items.forEach(item => venues.push(item.venue.name + " Address: " + (item.venue.location.address) + " Category:  " + (item.venue.categories[0].name)));
             console.log('normalized DATA ==>', venues);
             // appending the venue information to the class thingToDo.
