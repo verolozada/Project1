@@ -1,5 +1,5 @@
 $(document).ready(function () {
-   
+
 
     $("#test").on("click", function () {
         // event.preventDefault();
@@ -18,31 +18,15 @@ $(document).ready(function () {
             console.log('Response from FourSquare===>', response);
             const { response: { groups } } = response;
             const venues = [];
-            // const venuesAddress = [];
-            groups[0].items.forEach(item => venues.push(item.venue.name + " Category: " + (item.venue.categories[0].name) + " Address:  " + (item.venue.location.address)));
+            groups[0].items.forEach(item => venues.push(item.venue.name + " Address: " + (item.venue.location.address) + " Category:  " + (item.venue.categories[0].name)));
             console.log('normalized DATA ==>', venues);
-             venues.forEach(venue => {
-             console.log(venue);
-             $("#thingsToDo").append('<p>' + venue.name + '</p>');
-            });
-
+            // appending the venue information to the class thingToDo.
             venues.forEach(venue => {
                 console.log("This is the Venue ==>", venue);
-                $(".thingToDo").append('<p>' + venue + '</p>');
+                 $(".thingToDo").append('<p>' + venue + '</p>');
             });
 
         })
 
-    });
-
-
-
-
-
-
-
-
-
-
-
-
+    })
+});
