@@ -24,22 +24,13 @@ $(document).ready(function () {
             // This code returns the response for the venue's name, the venue's address and the venue's category from the FourSquare API.
             groups[0].items.forEach(item => venues.push(item.venue.name + " - " + (item.venue.location.address) + " -  " + (item.venue.categories[0].name)));
             console.log('normalized DATA ==>', venues);
-<<<<<<< HEAD
-            venues.forEach(venue => {
-                console.log(venue);
-                $("#thingsToDo").append('<p>' + venue.name + '</p>');
-            });
-
-=======
             // appending the venue information to the class response.
             $(".response").append('<h4>Things to Do</h4>')
->>>>>>> fe98006bd551513bcf3213c07c13861580f7c9ae
             venues.forEach(venue => {
                 console.log("This is the Venue ==>", venue);
                  $(".response").append('<p>' + venue + '</p>');
             });
 
-<<<<<<< HEAD
         });
     });
 
@@ -91,9 +82,3 @@ function resetVideoHeight() {
 
 
 
-=======
-        })
-
-    })
-});
->>>>>>> fe98006bd551513bcf3213c07c13861580f7c9ae
