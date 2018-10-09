@@ -1,8 +1,4 @@
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
-
->>>>>>> fe98006bd551513bcf3213c07c13861580f7c9ae
 
     $("#test").on("click", function () {
         // event.preventDefault();
