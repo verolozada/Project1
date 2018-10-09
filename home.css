@@ -15,6 +15,32 @@ h4{
     
 }
 
+.plane {
+    font-family: 'Fjalla One';
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #fff;
+    width: 25%;
+}
+
+.plane:hover {
+    height: 35px;
+    width: 30%;
+    font-size: 24px;
+}
+
+.response {
+    margin-top: 50px;
+    font-family: 'Fjalla One';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+}
+
 .content{
     margin: 0 auto center;
     border: 0.01em solid gray;
