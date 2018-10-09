@@ -42,6 +42,7 @@ $(document).ready(function () {
     function searchA() {
         var q = encodeURIComponent($("#search").val()).replace(/%20/g, "+")
         var request = gapi.client.youtube.channels.list({
+            type: 'video',
             part: 'snippet',
             maxResults: 3,
             order: "viewCount",
