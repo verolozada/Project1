@@ -124,7 +124,6 @@ $(document).ready(function () {
             $("#date-test").text("valid date");
         }
     }
-
 });
 
 
