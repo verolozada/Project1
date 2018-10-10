@@ -33,7 +33,7 @@ $(document).ready(function () {
 
         var city = $("#autocomplete-input1").val().trim();
         var country = $("#autocomplete-input2").val().trim();
-
+        //calling the youtube api
         var request = gapi.client.youtube.search.list({
             q: encodeURIComponent(city + ' things to do travel vlog ' + country).replace(/%20/g,"+"),
             type: 'video',
@@ -42,7 +42,7 @@ $(document).ready(function () {
             order: "viewCount",
             publishedAfter: "2017-01-01T00:00:00Z",
         });
-        //execute request 
+        //execute api request
         request.execute(function (response) {
             var results = response.result;
             $(".vlogs").html("");
