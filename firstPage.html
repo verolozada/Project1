@@ -12,12 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Insert Favicon for the Tab Bar-->
     <link rel="shortcut icon" type="assets/image/png" href="images/icon/travel (1).png">
-    <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet" href="first.css">
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!--JavaScript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pathway+Gothic+One" rel="stylesheet">
 </head>
 
 <body>
@@ -61,53 +63,64 @@
             </ul>
         </div>
     </nav>
-    <div class="slider">
+    <!-- Slider -->
+    <section class="slider">
         <ul class="slides">
             <li>
-                <img src="images/blogs/the-bucket-list-family.jpeg">
-                <div class="caption">
-                    <a class="link" href="http://www.thebucketlistfamily.com/" target="_blank">The Bucket List Family</a>
+                <img src="https://www.madridiario.es/fotos/1/madrid.jpg" alt="">
+                <div class="caption center-align">
+                    <h2>Take Your Dream Vacation</h2>
+                    <a href="home.html" class="btn btn-large">Choose a destination</a>
                 </div>
             </li>
             <li>
-                <img src="images/blogs/dan.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.danflyingsolo.com/" target="_blank">Dan Flying Solo</a>
+                <img src="https://i0.wp.com/viajesazulmarino.com/blog/wp-content/uploads/canada_.png?resize=913%2C607&ssl=1" alt="">
+                <div class="caption left-align">
+                    <h2>Group & Individuals Getaways</h2>
+                    <a href="home.html" class="btn btn-large">Choose a destination</a>
                 </div>
             </li>
             <li>
-                <img src="images/blogs/savage.jpg">
-                <div class="caption">
-                    <a class="link" href="http://www.traveling-savage.com/2018/09/05/picture-this-note-bow-fiddle-rock/" target="_blank">The Traveling Savage</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/blogs/bemy4.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.bemytravelmuse.com/about/" target="_blank">Be My Travel Muse</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/blogs/2dads.jpg">
-                <div class="caption">
-                    <a class="link" href="https://2traveldads.com/" target="_blank">2 Travel Dads</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/blogs/goats.jpg">
-                <div class="caption">
-                    <a class="link" href="https://www.goatsontheroad.com/" target="_blank">Goats on the Road</a>
-                </div>
-            </li>
-            <li>
-                <img src="images/blogs/nerds2.jpg">
-                <div class="caption">
-                    <a class="link" href="https://nerdnomads.com/" target="_blank">The Nerd Nomads</a>
+                <img src="http://cvrtours.com.ve/wp-content/uploads/2017/03/LosRoques-5.jpg" alt="">
+                <div class="caption right-align">
+                    <h2>Enjoy Your Vacation</h2>
+                    <a href="home.html" class="btn btn-large">Choose a destination</a>
                 </div>
             </li>
         </ul>
-    </div>
-
+    </section>
+<br>
+<br>
+<!-- Section: Icon Boxes -->
+<section class="section section-icons grey lighten-4 center">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large">room</i>
+                <h4>Pick Where</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large">landscape</i>
+                <h4>Some Text</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+              </div>
+            </div>
+            <div class="col s12 m4">
+              <div class="card-panel">
+                <i class="material-icons large">airplanemode_active</i>
+                <h4>Some Text</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br>
+      <br>
 
     <footer class="page-footer red accent-3">
         <div class="container2">
@@ -115,13 +128,14 @@
         </div>
         </div>
     </footer>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- javascript -->
+    <script src="first.js"></script>
+
+
+
 
 </body>
-
-<script>
-    $(document).ready(function () {
-        $('.slider').slider();
-    });
-</script>
 
 </html>
