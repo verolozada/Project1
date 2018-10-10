@@ -3,6 +3,10 @@
     background-color:#e57373;
   }
 
+.slider{
+  margin-top: 6em;
+  margin-bottom: 5em;
+}
 
 .page-footer{
     position: fixed;
