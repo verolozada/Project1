@@ -53,7 +53,7 @@ h4{
     border: 0.1em solid gray;
     width: 60%;
     margin-top: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     padding: 2em;
     text-align: center;
     border-radius: 1em;
@@ -71,6 +71,7 @@ h4{
     text-align: center;
     border-radius: 1em;
     margin-left: 5em;
+    margin-bottom: 2em;
 }
 
 .vlogs{
