@@ -1,3 +1,5 @@
+function tplawesome(e, t) { res = e; for (var n = 0; n < t.length; n++) { res = res.replace(/\{\{(.*?)\}\}/g, function (e, r) { return t[n][r] }) } return res }
+
 $(document).ready(function () {
 
     $("#test").on("click", function () {
@@ -18,32 +20,23 @@ $(document).ready(function () {
             const { response: { groups } } = response;
             const venues = [];
             // This code returns the response for the venue's name, the venue's address and the venue's category from the FourSquare API.
-            groups[0].items.forEach(item => venues.push(item.venue.name + "<br>" + "Address: " + (item.venue.location.address) + "<br>" + " Category: " + (item.venue.categories[0].name)));
+            groups[0].items.forEach(item => venues.push(item.venue.name + " - " + (item.venue.location.address) + " -  " + (item.venue.categories[0].name)));
             console.log('normalized DATA ==>', venues);
             // appending the venue information to the class response.
             $(".response").append('<h4>Things to Do</h4>')
             venues.forEach(venue => {
                 console.log("This is the Venue ==>", venue);
-                 $(".response").append('<p>' + venue + '</p>');
+                $(".response").append('<p>' + venue + '</p>');
             });
 
         });
-    });
-
-    function tplawesome(e, t) { res = e; for (var n = 0; n < t.length; n++) { res = res.replace(/\{\{(.*?)\}\}/g, function (e, r) { return t[n][r] }) } return res }
 
 
-    function googleApiClientReady() {
-        gapi.client.setApiKey("AIzaSyD3VXMd8bzXIQijinIuKOKsgqQ1mg6bv80");
-        gapi.client.load('youtube', 'v3', function () {
-            searchA();
-        });
-    }
-    function searchA() {
-        var q = encodeURIComponent($("#search").val()).replace(/%20/g, "+")
-        var request = gapi.client.youtube.channels.list({
+        var request = gapi.client.youtube.search.list({
+            q: encodeURIComponent($("#autocomplete-input1").val()).replace(/%20/g, "+"),
+            type: 'video',
             part: 'snippet',
-            maxResults: 3,
+            maxResults: 1,
             order: "viewCount",
             publishedAfter: "2017-01-01T00:00:00Z",
         });
@@ -52,22 +45,23 @@ $(document).ready(function () {
             var results = response.result;
             $(".vlogs").html("");
             $.each(results.items, function (index, item) {
-                $.get("tpl/item.html", function (data) {
-                    $(".vlogs").append(tplawesome(data, [{ "title": item.snippet.title, "videoid": item.id.videoID }]));
+                $.get("item.html", function (data) {
+                    $(".vlogs").append(tplawesome(data, [{ "title": item.snippet.title, "videoId": item.id.videoId }]));
                 });
+                console.log(results)
             });
-            resetVideoHeight();
+
         });
-    };
-
-$(window).on("resize", resetVideoHeight);
-
-function resetVideoHeight() {
-    $("video").css("height")
-} 
+    });
 
 });
 
+function init() {
+    gapi.client.setApiKey("AIzaSyC-28ZxLgj-7ZEPWEN-8Cwaew0OF1AHaig")
+    gapi.client.load("youtube", "v3", function () {
+
+    })
+}
 
 
 
