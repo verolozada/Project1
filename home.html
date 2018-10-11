@@ -14,8 +14,6 @@
     <!--Insert Favicon for the Tab Bar-->
     <link rel="shortcut icon" type="assets/image/png" href="images/icon/travel (1).png">
     <link rel="stylesheet" href="home.css">
-    <!--Materialize-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 
@@ -101,7 +99,23 @@
             <div class="row">
                 <div class="col s11">
                     <div class="translate">
-                        <h4>What to Say?</h4>
+                        <h4></h4>
+                        <div class="container ">
+                      
+                        <!-- dropdown trigger -->
+                        <a class='dropdown-trigger btn ' href='#' data-target='dropdown1' name='voice' id='voices'>Select Your Voice!</a>
+                        <ul id='dropdown1' class='dropdown-content'></ul>
+                        <br>
+                        <br>
+
+                        <div id="sayIt">What do you want to say?</div>
+                        <div id="text" name="english-text"></div>
+                        <br>
+                        <br>
+                        <!-- <textarea id="text" name="text"></textarea> -->
+                        <button id="stop">Stop!</button>
+                        <button id="speak">Speak</button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -118,6 +132,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- javascript -->
         <script src="home.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <!--YouTube API Script-->
         <script src="https://apis.google.com/js/client.js?onload=init"></script>
 </body>
