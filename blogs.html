@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Pacifico" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--Import materialize.css-->
+    <title>Bon Voyage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Insert Favicon for the Tab Bar-->
+    <link rel="shortcut icon" type="assets/image/png" href="images/icon/travel (1).png">
+    <link rel="stylesheet" href="blogs.css">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="red accent-3">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo" style="font-family:'Pacifico', cursive;">Bon Voyage</a>
+            <!-- SideNav -->
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="destinations.html">Wonders of the World</a>
+                </li>
+                <li>
+                    <a href="eat.html">World's Top Restaurants</a>
+                </li>
+                <li>
+                    <a href="blogs.html">Travel Blogs</a>
+                </li>
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+            </ul>
+
+            <!-- Sidebar/nav menu -->
+            <ul class="sidenav" id="mobile-demo">
+                <li>
+                    <a href="destinations.html">Wonders of the World</a>
+                </li>
+                <li>
+                    <a href="eat.html">World's Top Restaurants</a>
+                </li>
+                <li>
+                    <a href="blogs.html">Travel Blogs</a>
+                </li>
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="images/blogs/the-bucket-list-family.jpeg">
+                <div class="caption">
+                    <a class="link" href="http://www.thebucketlistfamily.com/" target="_blank">The Bucket List Family</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/dan.jpg">
+                <div class="caption">
+                    <a class="link" href="https://www.danflyingsolo.com/" target="_blank">Dan Flying Solo</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/savage.jpg">
+                <div class="caption">
+                    <a class="link" href="http://www.traveling-savage.com/2018/09/05/picture-this-note-bow-fiddle-rock/" target="_blank">The Traveling Savage</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/bemy4.jpg">
+                <div class="caption">
+                    <a class="link" href="https://www.bemytravelmuse.com/about/" target="_blank">Be My Travel Muse</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/2dads.jpg">
+                <div class="caption">
+                    <a class="link" href="https://2traveldads.com/" target="_blank">2 Travel Dads</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/goats.jpg">
+                <div class="caption">
+                    <a class="link" href="https://www.goatsontheroad.com/" target="_blank">Goats on the Road</a>
+                </div>
+            </li>
+            <li>
+                <img src="images/blogs/nerds2.jpg">
+                <div class="caption">
+                    <a class="link" href="https://nerdnomads.com/" target="_blank">The Nerd Nomads</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <footer class="page-footer red accent-3">
+        <div class="container2">
+            © 2018 Copyright
+        </div>
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('.slider').slider();
+    });
+</script>
+
+</html>

@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.p{
+    font-size: 2em;  
+    font-family: 'Fjalla One';
+} 
+
+h4{
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.plane {
+    font-family: 'Fjalla One';
+    font-size: 16px;
+    border-radius: 5px;
+    border-color: #fff;
+    width: 25%;
+}
+
+.plane:hover {
+    height: 35px;
+    width: 30%;
+    font-size: 24px;
+}
+
+.response {
+    margin-top: 50px;
+    font-family: 'Fjalla One';
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+}
+
+.content{
+    margin: 0 auto center;
+    border: 0.01em solid gray;
+    width: 50%;
+    padding: 2em;
+}
+
+
+#userSubmit{
+    border: 0.1em solid gray;
+    width: 60%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.thingToDo{
+    border: .1em solid gray;
+    margin-top: 100px;
+    text-align: center;
+    border-radius: 1em;
+}
+
+.translate{
+    border: .1em solid gray;
+    text-align: center;
+    border-radius: 1em;
+    margin-left: 5em;
+    margin-bottom: 3em;
+}
+
+.vlogs{
+    border: .1em solid gray;
+    text-align: center;
+    border-radius: 1em;
+    margin-left: 5em;
+    padding-bottom: 1em;
+}
+
+
+h4{
+    font-family: 'Fjalla One';
+    font-size: 2rem;
+ }
+
+.results{ 
+    margin-bottom: 5em;
+}
+
+.page-footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+}
+
+
+#voices{
+    background-color: #ef5350
+}
+
+.btn1{
+    background-color: #ffcdd2;
+    margin: 0.5em;
+}

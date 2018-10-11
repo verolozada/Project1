@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h5{
+    margin-top: 2em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.slider{
+    margin-top: 8em;
+    margin-bottom: 2em;
+}
+
+.page-footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+}
+
+
+.caption{ 
+    margin-top: 16em;
+    text-align: center;
+}
+
+.link{ 
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+    text-align: center;
+}

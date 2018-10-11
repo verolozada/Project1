@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h5{
+    margin-top: 2em;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#restaurants{ 
+    margin-left: 15em;
+}
+
+.page-footer{
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: white;
+}
+
+
+.caption{ 
+    margin-top: 16em;
+    text-align: center;
+}
+
+.link{ 
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+    text-align: center;
+}
+
+
+.rest-name{
+    color: black;
+    text-align: center;
+    font-family: "Courgette";
+    font-size: 1.5em;
+}
+
+.rest-place{
+    font-family: "Pathway Gothic One";
+    color: black;
+    font-size: 2.5em;
+}
+
+.rest-text{
+    text-align: justify;
+}
+
+.source{
+    font-style: italic;
+    font-weight: bold;
+}
