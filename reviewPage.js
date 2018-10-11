@@ -1,5 +1,9 @@
+const sideNav = document.querySelector('.sidenav');
+M.Sidenav.init(sideNav, {});
+
+
 $(document).ready(function () {
-    let validEmail; 
+    let validEmail;
     let validDate;
     // let validName;
     // let validComment;
@@ -23,41 +27,41 @@ $(document).ready(function () {
     $("#add-review").on("click", function (event) {
         event.preventDefault();
 
-        if (validEmail === true && validDate === true){
-        //  inputs from the user
-        const userName = $("#icon_name").val().trim();
-        //TODO: validate date
-        const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
-        //  TODO: input validation for email 
-        const userEmail = $("#email").val().trim();
-        const userComment = $("#icon_comment").val().trim();
+        if (validEmail === true && validDate === true) {
+            //  inputs from the user
+            const userName = $("#icon_name").val().trim();
+            //TODO: validate date
+            const userDate = moment($("#icon_date").val().trim(), "MM/DD/YYYY").format("X");
+            //  TODO: input validation for email 
+            const userEmail = $("#email").val().trim();
+            const userComment = $("#icon_comment").val().trim();
 
 
-        //hold data 
-        const newUser = {
-            name: userName,
-            date: userDate,
-            email: userEmail,
-            comment: userComment
+            //hold data 
+            const newUser = {
+                name: userName,
+                date: userDate,
+                email: userEmail,
+                comment: userComment
+            }
+
+            // ref gets yout to the root of the object in firebase 
+            database.ref().push(newUser);
+
+            console.log(newUser.name);
+            console.log(newUser.email);
+            console.log(newUser.date);
+            console.log(newUser.comment);
+
+            $("#icon_name").val("");
+            $("#icon_date").val("");
+            $("#email").val("");
+            $("#icon_comment").val("");
+            $("#click-test").text("");
+
+        } else {
+            $("#click-test").text("please complete the form");
         }
-
-        // ref gets yout to the root of the object in firebase 
-        database.ref().push(newUser);
-
-        console.log(newUser.name);
-        console.log(newUser.email);
-        console.log(newUser.date);
-        console.log(newUser.comment);
-
-        $("#icon_name").val("");
-        $("#icon_date").val("");
-        $("#email").val("");
-        $("#icon_comment").val("");
-        $("#click-test").text("");
-
-    } else {
-        $("#click-test").text("please complete the form");
-    }
     });
 
     // .on everytime the data changes I want to see the changes in my object in firebase
@@ -98,29 +102,29 @@ $(document).ready(function () {
         const date = /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/
         console.log($(this).attr("id"));
         let inputId = $(this).attr("id")
-        if (inputId === "email"){
-            validEmail = email.test($(this).val()) 
+        if (inputId === "email") {
+            validEmail = email.test($(this).val())
             console.log(validEmail);
             colorValidation(validEmail, inputId);
-        } else if (inputId === "icon_date"){
+        } else if (inputId === "icon_date") {
             validDate = date.test($(this).val())
             console.log(validDate);
             colorValidation(validDate, inputId);
         }
     }
 
-    function colorValidation (value, input){
-        if (value === false && input === "email"){
-            $("#email-test").css("color","red"); //.css is a function of jQuery 
+    function colorValidation(value, input) {
+        if (value === false && input === "email") {
+            $("#email-test").css("color", "red"); //.css is a function of jQuery 
             $("#email-test").text("email must be a valid address (name@domain.com)");
-        } else if (value === true && input === "email"){
-            $("#email-test").css("color","green");
+        } else if (value === true && input === "email") {
+            $("#email-test").css("color", "green");
             $("#email-test").text("valid email");
-        } else if (value === false && input === "icon_date"){
-            $("#date-test").css("color","red"); 
+        } else if (value === false && input === "icon_date") {
+            $("#date-test").css("color", "red");
             $("#date-test").text("enter a valid date");
-        }else if (value === true && input === "icon_date"){
-            $("#date-test").css("color","green");
+        } else if (value === true && input === "icon_date") {
+            $("#date-test").css("color", "green");
             $("#date-test").text("valid date");
         }
     }

@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     $("#test").on("click", function () {
         // event.preventDefault();
+        $(".response").empty();
+   
         console.log("I've been clicked");
         city = $("#autocomplete-input1").val().trim();
         console.log(city);
@@ -143,12 +145,4 @@ function init() {
 
     })
 }
-
-
-
-
-
-
-
-
 

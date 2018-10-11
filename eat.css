@@ -58,3 +58,8 @@ h5{
     font-style: italic;
     font-weight: bold;
 }
+
+#destPics{
+   widows: auto;
+   height: 265px; 
+}
