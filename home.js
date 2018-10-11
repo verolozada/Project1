@@ -56,6 +56,85 @@ $(document).ready(function () {
         });
     });
 
+    //how to say it 
+    let phrases = ['to the airport please', 'thank you', 'where is the restroom?'];
+
+        function buttons() {
+            for (let i = 0; i < phrases.length; i++) {
+                const text = $("<button>")
+                text.addClass("btn1 waves-effect waves-light btn")
+                text.attr("data-name", phrases[i]);
+                text.text(phrases[i]);
+                $("#text").append(text);
+            }
+        }
+        buttons();
+
+        let say;
+        let phrase;
+        let voicesDropdown;
+
+        $('.dropdown-trigger').dropdown();
+
+        $("#text").on("click", ".btn1", function () {
+            say = $(this).attr("data-name");
+            if (say === phrases[0]) {
+                phrase = 'al aeropuerto porfavor';
+            } else if (say === phrases[1]) {
+                phrase = 'gracias';
+            } else if (say === phrases[2]) {
+                phrase = 'donde está el baño';
+            }
+
+
+            const options = phrase; //range incluides rate and pitch 
+
+            msg.text = phrase; // grab the value that is in the textarea 
+
+        });
+
+        voicesDropdown = document.querySelector('[id="dropdown1"]');
+        const speakButton = document.querySelector('#speak');
+        const stopButton = document.querySelector('#stop');
+
+        const msg = new SpeechSynthesisUtterance();
+        let voices = [];
+
+
+        function populateVoices() {
+            voices = this.getVoices();
+            let language = 'es'; //let because is going to change later depending of the country selected 
+
+            voicesDropdown.innerHTML = voices
+                .filter(voice => voice.lang.includes(language))
+                .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`) //go over the array and 
+                .join('');
+        }
+
+        function setVoice() {
+            msg.voice = voices.find(voice => voice.name === this.value); //find the voice with the specific value of the voice clicked 
+            console.log(this.value);
+            toggle();
+        }
+        function toggle(startOver = true) {   //to cancel what happened before the new command
+            speechSynthesis.cancel();
+            if (startOver) {
+                speechSynthesis.speak(msg);
+            }
+        }
+
+        function setOption() {
+            console.log(this.name, this.value);
+            msg[this.name] = this.value;
+            toggle();
+        }
+        speechSynthesis.addEventListener('voiceschanged', populateVoices); //voices changed is an event from  speechSynthesis
+        voicesDropdown.addEventListener('change', setVoice); //everytime I change the voice I'll call the setVoice function
+        // options.forEach(option => option.addEventListener('change', setOption));
+        speakButton.addEventListener('click', toggle);
+        console.log(speakButton);
+        stopButton.addEventListener('click', () => toggle(false));
+
 });
 
 function init() {
